@@ -40,8 +40,8 @@ $(
                       D += i === drivers.length - 1 ? '' : ',';
                     }
                     sessionStorage.setItem('drivers', D);
-                    sessionStorage.setItem('source', result['source']);
-                    sessionStorage.setItem('destination', result['destination']);
+                    sessionStorage.setItem('source', result['source_list']);
+                    sessionStorage.setItem('destination', result['Destination']);
                     window.location.href = 'Html/Panel.html';
                   }
                 }
