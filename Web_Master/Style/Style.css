@@ -39,8 +39,6 @@ body {
   width: 30%;
 }
 
-
-
 #username, #password {
   width: 100%;
   background-color: transparent;
@@ -51,7 +49,7 @@ body {
   outline: none;
 }
 
-#username:focus, #password {
+#username:focus, #password:focus {
   outline: none;
 }
 
@@ -90,4 +88,15 @@ body {
 
 .transparent {
   color: transparent;
+}
+
+.bless {
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 1em;
 }
