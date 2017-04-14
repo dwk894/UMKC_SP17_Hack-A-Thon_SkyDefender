@@ -4,6 +4,7 @@
     <title>Sky Defender Inc. Web Master</title>
     <link rel = 'stylesheet' type = 'text/css' href = '../Style/Style.css'>
     <script type = 'text/javascript' src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script type = 'text/javascript' src = '../App/Pannel.js'></script>
   </head>
   <body>
     <table id = 'top'>
@@ -20,7 +21,16 @@
       <tr>
         <td class = 'half v_top'>
           <p class = 'h_center'><span class = 'adm_1'>Administrator Login</span></p>
-          <p class = 'h_center error'>(You have logged in.)</p>
+          <p class = 'h_center error'>(You have logged in.)</p><br><br>
+          <img src = 'https://github.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender/raw/master/Artworks/Photos/Dayu.jpg' style = 'display: block; margin: 0px auto; width: 150px; height: 150px;'><br><br>
+          <p class = 'h_center'><button class = 'button_login' id = 'sign_out'>Logout</button></p><br><br>
+          <table style = 'border-collapse: collpase; width: 100%; border: none;'>
+            <tr>
+              <td class = 'sub_title'>Truck Drivers</td>
+              <td class = 'sub_title' align = 'right'><button class = 'small_button' id = 'add_driver'>Add</button></td>
+            </tr>
+            <tr id = 'driver'></tr>
+          </table>
         </td>
         <td style = 'width: 5%'></td>
         <td class = 'v_top'>

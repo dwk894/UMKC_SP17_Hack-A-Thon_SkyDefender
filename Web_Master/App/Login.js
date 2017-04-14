@@ -26,8 +26,24 @@ $(
                 }
                 else {
                   $('#password_error').replaceWith('<span id = \'password_error\' class = \'error\' align = \'left\'></span>');
-                  sessionStorage.setItem('logged_in', '1');  // '1' means true -> logged in.
-                  window.location.href = 'Html/Panel.html';
+                  var is_adm = result['admin'];
+                  if (is_adm !== '1') {
+                    $('#username_error').replaceWith('<span id = \'username_error\' class = \'error\' align = \'left\'>Error: the user is not an administrator!</span>');
+                  }
+                  else {
+                    $('#username_error').replaceWith('<span id = \'username_error\' class = \'error\' align = \'left\'>Error: the user is not an administrator!</span>');
+                    sessionStorage.setItem('logged_in', '1');  // '1' means true -> logged in.
+                    var drivers = result['driver_list'];
+                    var D = '';
+                    for (var i = 0; i < drivers.length; i++) {
+                      D += drivers[i]['id'];
+                      D += i === drivers.length - 1 ? '' : ',';
+                    }
+                    sessionStorage.setItem('drivers', D);
+                    sessionStorage.setItem('source', result['source']);
+                    sessionStorage.setItem('destination', result['destination']);
+                    window.location.href = 'Html/Panel.html';
+                  }
                 }
               },
               error: function(error) {
