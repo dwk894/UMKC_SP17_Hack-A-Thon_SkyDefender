@@ -17,4 +17,77 @@ body {
   color: red;
   font-size: 2em;
   font-weight: bold;
+  vertical-align: middle;
+  width: 33%;
+}
+
+.adm_1 {
+  color: brown;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.h_center {
+  text-align: center;
+}
+
+#body {
+  width: 100%;
+}
+
+.half {
+  width: 30%;
+}
+
+
+
+#username, #password {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.2em;
+  color: black;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+#username:focus, #password {
+  outline: none;
+}
+
+.button_login {
+  background-color: slategray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: none;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+}
+
+.button_login:focus {
+  outline: none;
+}
+
+.v_middle {
+  vertical-align: middle;
+}
+
+.v_top {
+  vertical-align: top;
+}
+
+.news_1 {
+  color: black;
+  font-size: 1.2em;
+  font-family: 'Tahoma';
+}
+
+.transparent {
+  color: transparent;
 }
