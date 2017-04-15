@@ -318,3 +318,7 @@ body {
 .but8:hover {
   background-color: darkslategray;
 }
+
+.#assign_job {
+  font-size: 1em;
+}
