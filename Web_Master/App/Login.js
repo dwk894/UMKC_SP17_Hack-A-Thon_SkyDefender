@@ -40,8 +40,12 @@ $(
                       D += i === drivers.length - 1 ? '' : ',';
                     }
                     sessionStorage.setItem('drivers', D);
-                    sessionStorage.setItem('source', result['source_list']);
-                    sessionStorage.setItem('destination', result['Destination']);
+                    sessionStorage.setItem('source', JSON.stringify(result['source_list'][0]));
+                    sessionStorage.setItem('destination', JSON.stringify(result['Destination'][0]));
+                    sessionStorage.setItem('id', result['_id']);
+                    sessionStorage.setItem('password', result['password']);
+                    sessionStorage.setItem('email', result['email']);
+                    sessionStorage.setItem('waste', JSON.stringify(result['waste_list']));
                     window.location.href = 'Html/Panel.html';
                   }
                 }
