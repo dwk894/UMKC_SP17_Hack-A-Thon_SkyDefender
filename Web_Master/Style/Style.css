@@ -242,4 +242,79 @@ body {
   outline: none;
 }
 
-#
+.but {
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  cursor: pointer;
+  float: left;
+  width: 12.5%;
+}
+
+.but1 {
+  background-color: red;
+}
+
+.but1:hover {
+  background-color: darkred;
+}
+
+.but2 {
+  background-color: green;
+}
+
+.but2:hover {
+  background-color: darkgreen;
+}
+
+.but3 {
+  background-color: blue;
+}
+
+.but3:hover {
+  background-color: darkblue;
+}
+
+.but4 {
+  background-color: orange;
+}
+
+.but4:hover {
+  background-color: darkorange;
+}
+
+.but5 {
+  background-color: fuchsia;
+}
+
+.but5:hover {
+  background-color: deeppink;
+}
+
+.but6 {
+  background-color: yellow;
+}
+
+.but6:hover {
+  background-color: darkgoldenrod;
+}
+
+.but7 {
+  background-color: purple;
+}
+
+.but7:hover {
+  background-color: darkmagenta;
+}
+
+.but8 {
+  background-color: gray;
+}
+
+.but8:hover {
+  background-color: darkslategray;
+}
