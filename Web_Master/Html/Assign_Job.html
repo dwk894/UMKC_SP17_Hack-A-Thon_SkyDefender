@@ -5,4 +5,61 @@
     <link rel = 'stylesheet' type = 'text/css' href = '../Style/Style.css'>
     <script type = 'text/javascript' src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
   </head>
+  <body>
+    <p class = 'add_driver'>Assign Job to Drivers<br><br></p>
+    <table id = 'assign'>
+      <tr>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Supervisor</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Type of Job</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Region Number</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Waste Station ID</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Job Receiver</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Deadline</b></td>
+        <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Confirm</b></td>
+      </tr>
+      <tr>
+        <td class = 'm_2'>
+          Dayu
+        </td>
+        <td class = 'm_2'>
+          <input list = 'job_type' style = 'width: 95%;'>
+          <datalist id = 'job_type'>
+            <option value = 'Routine Job'></option>
+            <option value = 'Special Request'></option>
+          </datalist>
+        </td>
+        <td class = 'm_2'>
+          <input list = 'region_number' style = 'width: 95%;'>
+          <datalist id = 'region_number'>
+            <option value = '1'></option>
+            <option value = '2'></option>
+            <option value = '3'></option>
+            <option value = '4'></option>
+            <option value = '5'></option>
+            <option value = '6'></option>
+            <option value = '7'></option>
+            <option value = '8'></option>
+          </datalist>
+        </td>
+        <td class = 'm_2'>
+          <input type = 'number' style = 'width: 95%;'>
+        </td>
+        <td class = 'm_2'>
+          <input list = 'job_receiver' style = 'width: 95%;'>
+          <datalist id = 'job_receiver'>
+            <option value = 'Ting'></option>
+            <option value = 'Yunlong'></option>
+            <option value = 'Chen'></option>
+            <option value = 'Fei'></option>
+          </datalist>
+        </td>
+        <td class = 'm_2'>
+          <input type = 'time' style = 'width: 95%;'>
+        </td>
+        <td class = 'm_2'>
+          <button>Assign Job</button>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>

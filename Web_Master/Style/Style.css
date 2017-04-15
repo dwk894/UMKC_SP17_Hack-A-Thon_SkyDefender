@@ -319,6 +319,13 @@ body {
   background-color: darkslategray;
 }
 
-.#assign_job {
+#assign {
   font-size: 1em;
+  width: 100%;
+  border: none;
+  font-family: 'Tahoma';
+}
+
+.m_2 = {
+  width: 14.2%;
 }
