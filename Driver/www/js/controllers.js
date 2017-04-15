@@ -34,10 +34,12 @@ var options = {timeout: 10000, enableHighAccuracy: true};
  
     var mapOptions = {
       center: latLng,
-      zoom: 15,
+      zoom: 10,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+    
     $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
   console.log("after map");
   }, function(error){
     console.log("Could not get location");
@@ -123,7 +125,114 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 				}
 			}            
             
-			var test_point1,
+//------------------------------------------------------
+          $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+                 
+                  console.log(position);
+                  var lat1 = parseFloat(position.coords['latitude']);
+                  var lng1 = parseFloat(position.coords['longitude']);
+                  console.log(lat1);
+                  console.log(lng1);
+                  var currentlocation = {'lat': lat1, 'lng': lng1};
+                  console.log(currentlocation);
+                  var lat2 = parseFloat(nextStation['latitude'])
+                  var lng2 = parseFloat(nextStation['longtitude'])
+                  nextStation =  {'lat': lat2, 'lng': lng2};
+                  console.log(nextStation);
+            
+            
+            var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: nextStation
+        });
+		  directionsDisplay.setMap(map);
+		  calculateAndDisplayRoute(directionsService, directionsDisplay);
+    
+
+       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: currentlocation,
+          destination: nextStation,
+          travelMode: 'DRIVING'
+        },
+		  function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+			  var summaryPanel = document.getElementById('directions-panel');
+			  var route = response.routes[0];
+			  summaryPanel.innerHTML = '';
+			  for (var i = 0; i < route.legs.length; i++) {
+              var routeSegment = i + 1;
+//              summaryPanel.innerHTML += <b>Route Segment: ' + routeSegment +
+//                  '</b><br>';
+//              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+//              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+//              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+//                summaryPanel.innerHTML += '<ion-card> <ion-card-header>';
+//                summaryPanel.innerHTML +=  'Next Assignment';
+//                summaryPanel.innerHTML +='</ion-card-header>';
+//
+//                summaryPanel.innerHTML +='<ion-list>';
+//                summaryPanel.innerHTML +=  '<button ion-item>';
+//                 summaryPanel.innerHTML +=   '<ion-icon name="planet" item-left></ion-icon>';
+//                 summaryPanel.innerHTML +=  route.legs[i].start_address;
+//                 summaryPanel.innerHTML += '</button>';
+//
+//                 summaryPanel.innerHTML += '<button ion-item>';
+//                  summaryPanel.innerHTML +=  '<ion-icon name="medical" item-left></ion-icon>';
+//                 summaryPanel.innerHTML +=   route.legs[i].end_address;
+//                 summaryPanel.innerHTML += '</button>';
+//
+//                 summaryPanel.innerHTML += '<button ion-item>';
+//                  summaryPanel.innerHTML +=  '<ion-icon name="cafe" item-left></ion-icon>';
+//                  summaryPanel.innerHTML +=  route.legs[i].distance.text;
+//                  summaryPanel.innerHTML +='</button>';
+//
+//
+//                summaryPanel.innerHTML +='</ion-list>';
+//              summaryPanel.innerHTML +='</ion-card>';
+                
+
+			  }
+			  showSteps(response);
+            
+             function showSteps(directionResult) {
+  
+  var myRoute = directionResult.routes[0].legs[0];
+
+  for (var i = 0; i < myRoute.steps.length; i++) {
+      var marker = new google.maps.Marker({
+        position: myRoute.steps[i].start_point,
+        map: map
+      });
+      attachInstructionText(marker, myRoute.steps[i].instructions);
+      markerArray[i] = marker;
+  }
+}
+		  
+		  
+		  
+	  function attachInstructionText(marker, text) {
+  google.maps.event.addListener(marker, 'click', function() {
+    stepDisplay.setContent(text);
+    stepDisplay.open(map, marker);
+  });
+}
+	  
+	  
+			  
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+	  }
+
+            
+            
+          })
+          //---------------------------------------------
         })
         
       }
