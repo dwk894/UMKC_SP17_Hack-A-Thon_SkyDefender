@@ -1,0 +1,306 @@
+// Git
+.hs-btn, .hs-btn:active, .hs-btn:hover, .hs-btn.activated {
+    color: #fff;
+    border-color: #8ccccf;
+    background-color: #8fd4d1;
+}
+
+.hs-btn.activated {
+    background-image: -o-linear-gradient(top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: -webkit-linear-gradient(top left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.codegreen {
+    color: green;
+}
+
+.codered {
+    color: red;
+}
+
+.codeorange {
+    color: orange;
+}
+
+.codedarkorange {
+    color: darkorange;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.input-color-HT {
+    position: relative;
+}
+.input-color-HT input {
+    padding-left: 20px;
+}
+.input-color-HT .color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+body {
+  background-color: beige;
+  font-family: 'Trebuchet MS';
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#top {
+  border: none;
+  border-bottom: 8px solid red;
+  width: 100%;
+}
+
+#logo {
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+  vertical-align: middle;
+  width: 33%;
+}
+
+.adm_1 {
+  color: brown;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.h_center {
+  text-align: center;
+}
+
+#body {
+  width: 100%;
+}
+
+.half {
+  width: 30%;
+}
+
+#username, #password {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.2em;
+  color: black;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+#username:focus, #password:focus {
+  outline: none;
+}
+
+.button_login {
+  background-color: slategray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: none;
+  cursor: pointer;
+  border-radius: 12px;
+  outline: none;
+}
+
+.button_login:focus {
+  outline: none;
+}
+
+.v_middle {
+  vertical-align: middle;
+}
+
+.v_top {
+  vertical-align: top;
+}
+
+.news_1 {
+  color: black;
+  font-size: 1.2em;
+  font-family: 'Tahoma';
+}
+
+.transparent {
+  color: transparent;
+}
+
+.bless {
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 1em;
+}
+
+.sub_title {
+  color: purple;
+  font-size: 1.2em;
+  width: 28%;
+  border-bottom: 3px solid purple;
+  font-weight: bold;
+}
+
+.small_button {
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  border-radius: 0.6em;
+  cursor: pointer;
+  margin: 10px 0px 10px 10px;
+}
+
+.small_button:focus {
+  outline: none;
+}
+
+.driver {
+  color: purple;
+  font-size: 1.2em;
+  width: 28%;
+}
+
+.button_2 {
+  color: purple;
+  font-size: 1.2em;
+  width: 50%;
+}
+
+.add_driver {
+  color: darkblue;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.input_field {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.2em;
+  color: black;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.input_field:focus {
+  outline: none;
+}
+
+.fat {
+  padding-top: 0.8em;
+}
+
+.blue_button {
+  background-color: blue;
+  color: white;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  border-radius: 0.6em;
+  cursor: pointer;
+  margin: 10px 0px 10px 0px;
+  display: inline-block;
+}
+
+.blue_button:focus {
+  outline: none;
+}
+
+.chat_box {
+  display: block;
+  border: none;
+  border: 2px solid green;
+  position: absolute;
+  top: 10%;
+  width: 90%;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.1em;
+  left: 3%;
+  right: 3%;
+}
+
+.input_box {
+  display: block;
+  border: none;
+  border: 2px solid red;
+  position: absolute;
+  width: 90%;
+  height: 2em;
+  bottom: 3%;
+  left: 3%;
+  right: 3%;
+}
+
+.floating {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+  border:none;
+  margin: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.floating:focus {
+  outline: none;
+}
+
+#chat_msg {
+  display: inline-block;
+  float: left;
+  height: 1.8em;
+  background-color: transparent;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: calc(100% - 5.1em);
+}
+
+#chat_msg:focus {
+  outline: none;
+}

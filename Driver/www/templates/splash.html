@@ -1,0 +1,27 @@
+<ion-view view-title="Skydefender">
+	<ion-content class="padding" scroll="false">
+		<link href="css/splash-style.css" rel="stylesheet">
+
+		<div id="splash-wrap">
+			<div id="logo">
+			<img style="position: relative; top: 25%;height: 40%; width: 40%;"
+            src="https://rawgit.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender/master/Artworks/Company_Logo/Logo1.svg" />
+			</div>
+			<br>
+            <p style = "color: gray;">Driver login</p>
+		<form ng-submit="doLogin(credential)">
+			<div>
+				<label class="item item-input">
+					<input type="text" placeholder="User ID" ng-model="credential.username">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="credential.password">
+				</label>
+			</div>
+
+			<button type="submit" class="button button-royal button-block">Log in</button>
+		</form>
+<!--		<p>Forget password? Please contact admin</p>-->
+		</div>
+	</ion-content>
+</ion-view>
