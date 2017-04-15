@@ -10,7 +10,7 @@ window.onload = function() {
   for (var i = 0; i < drivers.length; i++) {
     driver_script += '<tr id = \'driver\'>';
     driver_script += '<td class = \'driver\'>' + drivers[i] + '</td>';
-    driver_script += '<td class = \'button_2\' align = \'right\'><button class = \'small_button\' onclick = \'ddelete("' + drivers[i] + '");\'>' + 'Delete' + '</button>' + '<button class = \'small_button\' onclick = \'location("' + drivers[i] + '");\'>' + 'Location' + '</button>' + '</td>';
+    driver_script += '<td class = \'button_2\' align = \'right\'>' + '<button class = \'blue_button\' onclick = \'chat("' + drivers[i] + '");\'>' + 'Chat' + '</button>' + '<button class = \'small_button\' onclick = \'ddelete("' + drivers[i] + '");\'>' + 'Delete' + '</button>' + '<button class = \'small_button\' onclick = \'location("' + drivers[i] + '");\'>' + 'Location' + '</button>' + '</td>';
     driver_script += '</tr>';
   }
   $('#driver').replaceWith(driver_script + '<tr><td><br><br></td></tr>');
@@ -159,4 +159,9 @@ function ddelete(id) {
       }
     );
   }
+}
+
+function chat(you) {
+  sessionStorage.setItem('you', you);
+  window.open('Chat.html', 'Sky Defender Chatting App', 'width=400,height=600');
 }
