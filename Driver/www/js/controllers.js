@@ -170,30 +170,8 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 //              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
 //              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
 //              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-//                summaryPanel.innerHTML += '<ion-card> <ion-card-header>';
-//                summaryPanel.innerHTML +=  'Next Assignment';
-//                summaryPanel.innerHTML +='</ion-card-header>';
-//
-//                summaryPanel.innerHTML +='<ion-list>';
-//                summaryPanel.innerHTML +=  '<button ion-item>';
-//                 summaryPanel.innerHTML +=   '<ion-icon name="planet" item-left></ion-icon>';
-//                 summaryPanel.innerHTML +=  route.legs[i].start_address;
-//                 summaryPanel.innerHTML += '</button>';
-//
-//                 summaryPanel.innerHTML += '<button ion-item>';
-//                  summaryPanel.innerHTML +=  '<ion-icon name="medical" item-left></ion-icon>';
-//                 summaryPanel.innerHTML +=   route.legs[i].end_address;
-//                 summaryPanel.innerHTML += '</button>';
-//
-//                 summaryPanel.innerHTML += '<button ion-item>';
-//                  summaryPanel.innerHTML +=  '<ion-icon name="cafe" item-left></ion-icon>';
-//                  summaryPanel.innerHTML +=  route.legs[i].distance.text;
-//                  summaryPanel.innerHTML +='</button>';
-//
-//
-//                summaryPanel.innerHTML +='</ion-list>';
-//              summaryPanel.innerHTML +='</ion-card>';
-                
+//    
+          summaryPanel.innerHTML += '<b>Next Assignment</b><br><br><b>Current Location :  '+ route.legs[i].start_address + '</b><br><b>Next Station :  '+ route.legs[i].end_address+ '</b><br><b>Mileage :  '+route.legs[i].distance.text+ '</b>';
 
 			  }
 			  showSteps(response);
