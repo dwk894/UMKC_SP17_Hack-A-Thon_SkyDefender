@@ -1,6 +1,6 @@
 	angular.module('app.controllers', ['ngAnimate','ngCordova'])
 
-    .controller('LoginCtrl', function ($scope, $http, $httpParamSerializerJQLike, $location, $ionicPopup, UserService) {
+    .controller('LoginCtrl', function ($scope, $http, $httpParamSerializerJQLike, $location, $ionicPopup) {
         $scope.pageClass = 'validate';  
         $scope.doLogin = function(credential){
         console.log("inside login function");
@@ -24,6 +24,19 @@
     }
     })
     
+	.controller('logoutCtrl', function ($scope, $location) {
+		$scope.cancle = function () {
+			$location.path('/home/map');
+
+		}
+		
+		$scope.logout = function () {
+			sessionStorage.setItem('userID', null);
+			sessionStorage.setItem('id', null);
+    		sessionStorage.setItem('you', null);
+			$location.path('/');
+		}
+	})
     .controller('mapCtrl', function ($scope, $http, $state, $cordovaGeolocation) {
   
 var options = {timeout: 10000, enableHighAccuracy: true};
@@ -108,6 +121,8 @@ var options = {timeout: 10000, enableHighAccuracy: true};
       }
       
       $scope.getNext = function () {
+		  document.getElementById("nextlocation").addClass("show"); 
+		  var tmplocation;
         console.log("get next waste point");
 		var nextStation;
         $http({
@@ -162,7 +177,7 @@ var options = {timeout: 10000, enableHighAccuracy: true};
             directionsDisplay.setDirections(response);
 			  var summaryPanel = document.getElementById('directions-panel');
 			  var route = response.routes[0];
-			  summaryPanel.innerHTML = '';
+//			  summaryPanel.innerHTML = '';
 			  for (var i = 0; i < route.legs.length; i++) {
               var routeSegment = i + 1;
 //              summaryPanel.innerHTML += <b>Route Segment: ' + routeSegment +
@@ -194,14 +209,17 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 //                summaryPanel.innerHTML +='</ion-list>';
 //              summaryPanel.innerHTML +='</ion-card>';
                 
-
 			  }
+			  
+			  tmplocation = route.legs[route.legs.length - 1];
+			  console.log(tmplocation);
+
+			  console.log(route.legs[route.legs.length - 1]);
 			  showSteps(response);
             
              function showSteps(directionResult) {
   
   var myRoute = directionResult.routes[0].legs[0];
-
   for (var i = 0; i < myRoute.steps.length; i++) {
       var marker = new google.maps.Marker({
         position: myRoute.steps[i].start_point,
@@ -234,7 +252,9 @@ var options = {timeout: 10000, enableHighAccuracy: true};
           })
           //---------------------------------------------
         })
-        
+		  console.log(tmplocation);
+       $scope.location = tmplocation;
+		  
       }
     })
 

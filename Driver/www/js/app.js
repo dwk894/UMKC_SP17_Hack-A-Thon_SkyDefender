@@ -5,7 +5,7 @@
 // 'app.services' is found in services.js
 // 'app.controllers' is found in controllers.js
 
-angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova', 'chart.js', 'ui.router'])
+angular.module('app', ['ionic', 'app.controllers', 'ngCordova', 'chart.js', 'ui.router'])
 
     .config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
         // Ionic uses AngularUI Router which uses the concept of states
@@ -34,6 +34,15 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova', 
                 }
             })
 
+	    	.state('home.logout', {
+                url: '/logout',
+                views: {
+                    menuContent: {
+                        controller: 'logoutCtrl',
+                        templateUrl: 'templates/logout.html'
+                    }
+                }
+            })
             .state('home.wastepoints', {
                 url: '/wastepoints',
                 views: {
