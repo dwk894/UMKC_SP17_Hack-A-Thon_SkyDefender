@@ -710,3 +710,13 @@ function update_marker(zone) {
     }
   }
 }
+
+$(
+  function() {
+    $('#assign').click(
+      function() {
+        window.open('Assign_Job.html', 'Job Assignment', 'width=800,height=600')
+      }
+    );
+  }
+);

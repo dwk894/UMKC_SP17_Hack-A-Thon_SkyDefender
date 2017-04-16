@@ -329,3 +329,14 @@ body {
 .m_2 = {
   width: 14.2%;
 }
+
+.no_focus:focus {
+  outline: none;
+}
+
+.region_answer {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  line-height: 150%;
+}

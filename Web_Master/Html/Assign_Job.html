@@ -4,6 +4,7 @@
     <title>Assign Job to Drivers</title>
     <link rel = 'stylesheet' type = 'text/css' href = '../Style/Style.css'>
     <script type = 'text/javascript' src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js'></script>
+    <script type = 'text/javascript' src = '../App/Assign_Job.js'></script>
   </head>
   <body>
     <p class = 'add_driver'>Assign Job to Drivers<br><br></p>
@@ -18,18 +19,16 @@
         <td class = 'm_2' style = 'border-bottom: 2px solid black;'><b>Confirm</b></td>
       </tr>
       <tr>
+        <td id = 'supervisor' class = 'm_2'></td>
         <td class = 'm_2'>
-          Dayu
-        </td>
-        <td class = 'm_2'>
-          <input list = 'job_type' style = 'width: 95%;'>
+          <input id = 'job_t' list = 'job_type' style = 'width: 95%;' class = 'no_focus'>
           <datalist id = 'job_type'>
             <option value = 'Routine Job'></option>
             <option value = 'Special Request'></option>
           </datalist>
         </td>
         <td class = 'm_2'>
-          <input list = 'region_number' style = 'width: 95%;'>
+          <input id = 'region_num' list = 'region_number' style = 'width: 95%;' class = 'no_focus'>
           <datalist id = 'region_number'>
             <option value = '1'></option>
             <option value = '2'></option>
@@ -42,23 +41,53 @@
           </datalist>
         </td>
         <td class = 'm_2'>
-          <input type = 'number' style = 'width: 95%;'>
+          <input id = 'waste_id' type = 'number' style = 'width: 95%;' class = 'no_focus'>
         </td>
         <td class = 'm_2'>
-          <input list = 'job_receiver' style = 'width: 95%;'>
-          <datalist id = 'job_receiver'>
-            <option value = 'Ting'></option>
-            <option value = 'Yunlong'></option>
-            <option value = 'Chen'></option>
-            <option value = 'Fei'></option>
-          </datalist>
+          <input id = 'job_r' list = 'job_receiver' style = 'width: 95%;' class = 'no_focus'>
+          <datalist id = 'job_receiver'></datalist>
         </td>
         <td class = 'm_2'>
-          <input type = 'time' style = 'width: 95%;'>
+          <input id = 'deadline' type = 'time' style = 'width: 95%;' class = 'no_focus'>
         </td>
         <td class = 'm_2'>
-          <button>Assign Job</button>
+          <button id = 'assign_job'>Assign Job</button>
         </td>
+      </tr>
+    </table>
+    <p class = 'add_driver'><br>Routes for Routine Jobs<br><br></p>
+    <table>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 1&emsp;</td>
+        <td class = 'region_answer' id = 'r1'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 2&emsp;</td>
+        <td class = 'region_answer' id = 'r2'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 3&emsp;</td>
+        <td class = 'region_answer' id = 'r3'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 4&emsp;</td>
+        <td class = 'region_answer' id = 'r4'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 5&emsp;</td>
+        <td class = 'region_answer' id = 'r5'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 6&emsp;</td>
+        <td class = 'region_answer' id = 'r6'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 7&emsp;</td>
+        <td class = 'region_answer' id = 'r7'></td>
+      </tr>
+      <tr>
+        <td class = 'region_answer' style = 'border-right: 2px solid black;'>Region 8&emsp;</td>
+        <td class = 'region_answer' id = 'r8'></td>
       </tr>
     </table>
   </body>
