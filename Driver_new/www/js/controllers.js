@@ -16,8 +16,24 @@
                 $location.path('/home/map');
             }
             else {
-              $scope.msg ="Incorrect user ID or password!";
-              console.log(credential.username);
+                    $scope.data = {}
+
+				  // Custom popup
+				  var myPopup = $ionicPopup.show({
+//					 template: '<input type = "text" ng-model = "data.model">',
+					 title: 'Incorrect user ID or password!',
+					 scope: $scope,
+
+					 buttons: [
+						{ text: 'OK',
+						type: 'button-positive'}
+					 ],
+					  template: 'Forget password? Contact Admin.'
+				  });
+
+				  myPopup.then(function(res) {
+					 console.log('Tapped!', res);
+				  });  
 
             }
         })            
@@ -52,11 +68,21 @@ var options = {timeout: 10000, enableHighAccuracy: true};
     };
     
     $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    
-  console.log("after map");
+      //Wait until the map is loaded
+    google.maps.event.addListenerOnce($scope.map, 'idle', function(){
+
+      var marker = new google.maps.Marker({
+          map: $scope.map,
+          animation: google.maps.Animation.DROP,
+          position: latLng
+      });      
+
+    });
+	  
   }, function(error){
     console.log("Could not get location");
   });
+		
     
     $scope.finish = function () {
 		var newData;
