@@ -185,6 +185,7 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 //              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
 //              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
 //              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+<<<<<<< HEAD
 //                summaryPanel.innerHTML += '<ion-card> <ion-card-header>';
 //                summaryPanel.innerHTML +=  'Next Assignment';
 //                summaryPanel.innerHTML +='</ion-card-header>';
@@ -209,6 +210,11 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 //                summaryPanel.innerHTML +='</ion-list>';
 //              summaryPanel.innerHTML +='</ion-card>';
                 
+=======
+//    
+          summaryPanel.innerHTML += '<b>Next Assignment</b><br><br><b>Current Location :  '+ route.legs[i].start_address + '</b><br><b>Next Station :  '+ route.legs[i].end_address+ '</b><br><b>Mileage :  '+route.legs[i].distance.text+ '</b>';
+
+>>>>>>> origin/master
 			  }
 			  
 			  tmplocation = route.legs[route.legs.length - 1];
