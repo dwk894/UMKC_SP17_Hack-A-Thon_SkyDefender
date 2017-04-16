@@ -249,13 +249,16 @@ $(
           reg = parseInt(reg) - 1;
           var r = routine_path(D[reg]);
           var new_w = [];
+          var pri = 1;
           for (var i = 0; i < r.length; i++) {
             new_w.push({
               'waste_id': (r[i] + 15 * reg).toString(),
               'latitude': WASTE[reg][r[i]][1].toString(),
               'longtitude': WASTE[reg][r[i]][2].toString(),
-              'zone_id': reg.toString()
+              'zone_id': reg.toString(),
+              'priority': pri.toString()
             });
+            pri++;
           }
           $.ajax(
             {
@@ -305,16 +308,18 @@ $(
                       clearInterval(timer_2);
                       var text_path = sessionStorage.getItem('newPath');
                       sessionStorage.setItem('newPath', null);
-                      console.log(text_path);
                       var text_path = text_path.split(',');
                       var new_path = [];
-                      for (var j = 0; j < current_path.length; j++) {
+                      var pri_2 = 1;
+                      for (var j = 0; j < text_path.length; j++) {
                         new_path.push({
                           'waste_id': text_path[j],
                           'latitude': WASTE[Math.floor(parseInt(text_path[j]) / 15)][parseInt(text_path[j]) % 15][1].toString(),
                           'longtitude': WASTE[Math.floor(parseInt(text_path[j]) / 15)][parseInt(text_path[j]) % 15][2].toString(),
-                          'zone_id': (Math.floor(parseInt(text_path[j]) / 15)).toString()
+                          'zone_id': (Math.floor(parseInt(text_path[j]) / 15)).toString(),
+                          'priority': pri_2.toString()
                         });
+                        pri_2++;
                       }
                       $.ajax(
                         {
