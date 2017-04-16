@@ -5,21 +5,11 @@
         <br>       
     <button ng-click="finish()" style="width: 47%; left: 1%;" class="button button-energized">Finish collection</button>
     <button ng-click="getNext()" style="width: 47%; right: -1%;" class="button button-calm">Get next station</button> 
-	<div id = "nextlocation" ng-model="location"  style="width: 96%;"class="hide card">
-	  <div class="item item-text-wrap">
-		  <p>Next Station Information:</p>
-	  	<br>
-		<div class="list">
-	  	<i class="icon ion-ios-home" style="font-size: 24px; padding-right: 16px;">
-        </i>
-        {{local.end_address}}	
-	  	</div>
-	  	<div class="list">
-	  	<i class="icon ion-clock" style="font-size: 24px; padding-right: 16px;">
-        </i>
-        {{local.duration.text}}	
-	  	</div>
-	  </div>
-	</div>
+	<div id="directions-panel" >
+<!--
+      <div class="item item-text-wrap">
+      </div>
+-->
+      </div>
     </ion-nav-view>
 </ion-view>

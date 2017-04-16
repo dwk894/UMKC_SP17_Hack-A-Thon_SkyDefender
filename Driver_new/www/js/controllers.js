@@ -121,7 +121,7 @@ var options = {timeout: 10000, enableHighAccuracy: true};
       }
       
       $scope.getNext = function () {
-		  document.getElementById("nextlocation").addClass("show"); 
+//		  document.getElementById("nextlocation").addClass("show"); 
 		  var tmplocation;
         console.log("get next waste point");
 		var nextStation;
@@ -185,38 +185,40 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 //              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
 //              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
 //              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-//                summaryPanel.innerHTML += '<ion-card> <ion-card-header>';
-//                summaryPanel.innerHTML +=  'Next Assignment';
-//                summaryPanel.innerHTML +='</ion-card-header>';
-//
-//                summaryPanel.innerHTML +='<ion-list>';
-//                summaryPanel.innerHTML +=  '<button ion-item>';
-//                 summaryPanel.innerHTML +=   '<ion-icon name="planet" item-left></ion-icon>';
-//                 summaryPanel.innerHTML +=  route.legs[i].start_address;
-//                 summaryPanel.innerHTML += '</button>';
-//
-//                 summaryPanel.innerHTML += '<button ion-item>';
-//                  summaryPanel.innerHTML +=  '<ion-icon name="medical" item-left></ion-icon>';
-//                 summaryPanel.innerHTML +=   route.legs[i].end_address;
-//                 summaryPanel.innerHTML += '</button>';
-//
-//                 summaryPanel.innerHTML += '<button ion-item>';
-//                  summaryPanel.innerHTML +=  '<ion-icon name="cafe" item-left></ion-icon>';
-//                  summaryPanel.innerHTML +=  route.legs[i].distance.text;
-//                  summaryPanel.innerHTML +='</button>';
-//
-//
-//                summaryPanel.innerHTML +='</ion-list>';
-//              summaryPanel.innerHTML +='</ion-card>';
+                $('<div id="directions-panel" style="width: 96%;"class="card"><div class="item item-text-wrap"><p style="font-size: 20px;"><b>Next Station Information:</b><br></p><div class="list"><br><i class="icon ion-ios-location" style="font-size: 20px; padding-right: 16px;"></i>'+route.legs[i].end_address+'</div><div class="list"><i class="icon ion-model-s" style="font-size: 20px; padding-right: 16px;"></i>'+ route.legs[i].distance.text+'</div><div class="list"><i class="icon ion-clock" style="font-size: 20px; padding-right: 16px;"></i>'+route.legs[i].duration.text+'</div></div></div>').replaceAll(summaryPanel);
                 
+//                summaryPanel.innerHTML +=  '<div id="directions-panel" style="width: 96%;"class="card">';    
+//   
+//                summaryPanel.innerHTML += '<div class="item item-text-wrap">';
+//                summaryPanel.innerHTML += ' <p>Next Station Information:</p>';
+//
+//                summaryPanel.innerHTML +=  '<div class="list">';
+//                summaryPanel.innerHTML +=	'<i class="icon ion-ios-home" style="font-size: 24px; padding-right: 16px;">';
+//                summaryPanel.innerHTML +=  '</i>';
+//                summaryPanel.innerHTML += route.legs[i].end_address ;
+                
+          
+//                summaryPanel.innerHTML +=	'</div>';
+                
+                
+//                summaryPanel.innerHTML +=	'<div class="list">';
+//                summaryPanel.innerHTML +=	'<i class="icon ion-clock" style="font-size: 24px; padding-right: 16px;">'
+//                summaryPanel.innerHTML += ' </i>';
+//                summaryPanel.innerHTML += route.legs[i].duration.text ;
+//                summaryPanel.innerHTML +=	'</div>';
+                
+                
+//                summaryPanel.innerHTML += '</div>';
+//                summaryPanel.innerHTML += '</div>';
+
 			  }
 			  
 			  tmplocation = route.legs[route.legs.length - 1];
 			  console.log(tmplocation);
 
-			  console.log(route.legs[route.legs.length - 1]);
+			  
 			  showSteps(response);
-            
+              $scope.location = tmplocation;
              function showSteps(directionResult) {
   
   var myRoute = directionResult.routes[0].legs[0];
@@ -252,8 +254,7 @@ var options = {timeout: 10000, enableHighAccuracy: true};
           })
           //---------------------------------------------
         })
-		  console.log(tmplocation);
-       $scope.location = tmplocation;
+		  
 		  
       }
     })
