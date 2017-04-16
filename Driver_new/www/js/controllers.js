@@ -53,7 +53,7 @@
 			$location.path('/');
 		}
 	})
-    .controller('mapCtrl', function ($scope, $http, $state, $cordovaGeolocation) {
+    .controller('mapCtrl', function ($scope, $http, $state, $cordovaGeolocation,$ionicPopup) {
   
 var options = {timeout: 10000, enableHighAccuracy: true};
  
@@ -123,10 +123,8 @@ var options = {timeout: 10000, enableHighAccuracy: true};
              url: 'https://api.mlab.com/api/1/databases/skydefender/collections/sky/'+ sessionStorage.getItem("userID")+'?apiKey=L3tVr3ypZdG3UXlyiek9YP3bZqbBQexR', 
             contentType: "application/json"
         }).success (function(data) {
-				console.log("deleted");		
-
-        })
-			 $http({
+				console.log("deleted");	
+							 $http({
                     method: 'POST',
                     url : 'https://api.mlab.com/api/1/databases/skydefender/collections/sky?apiKey=L3tVr3ypZdG3UXlyiek9YP3bZqbBQexR',
                     data: JSON.stringify({
@@ -142,7 +140,25 @@ var options = {timeout: 10000, enableHighAccuracy: true};
                     contentType: "application/json"
                 }).success(function(data) { 
                     console.log("created document");
+				 	  var myPopup = $ionicPopup.show({
+//					 template: '<input type = "text" ng-model = "data.model">',
+					 title: 'Waste State Finished!',
+					 scope: $scope,
+
+					 buttons: [
+						{ text: 'OK',
+						type: 'button-positive'}
+					 ]
+					  
+				  });
+
+				  myPopup.then(function(res) {
+					 console.log('Tapped!', res);
+				  });  
                 })
+
+        })
+
         })
       }
       
@@ -287,6 +303,7 @@ var options = {timeout: 10000, enableHighAccuracy: true};
 
     .controller('wastepointsCtrl', function ($scope, $http,$stateParams) {
         console.log("get remaining waste point");
+		 $scope.$on('$ionicView.enter', function() {
         $http({
             method: 'GET',
              url: 'https://api.mlab.com/api/1/databases/skydefender/collections/sky/'+ sessionStorage.getItem("userID")+'?apiKey=L3tVr3ypZdG3UXlyiek9YP3bZqbBQexR',           
@@ -298,7 +315,8 @@ var options = {timeout: 10000, enableHighAccuracy: true};
             
         })
         
-    })
+    }
+					)})
 
     .controller('chatCtrl', function ($scope, $stateParams) {
       console.log("chat application");
