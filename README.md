@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # 2017 Spring UMKC & H&R Block Hackathon - Waste Collection Analysis - Web Application (CSEE Use Case)
 
 ## Team - Sky Defender
@@ -24,3 +25,9 @@ When the truck driver finishes collecting the waste, he/she can report the compl
 
 ### Scenario #4: 
 Company administrator and truck driver and chat inside the app if needed.
+=======
+# UMKC_SP17_Hack-A-Thon_SkyDefender
+
+2017 Spring UMKC & H&R Block Hackathon							April 13th - April 20th, 2017									
+Team members: Dayu Wang, L
+>>>>>>> Stashed changes
