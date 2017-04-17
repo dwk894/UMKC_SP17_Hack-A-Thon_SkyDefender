@@ -4,7 +4,11 @@
 Dayu Wang (#45), Yunlong Liu (#22), Chen Wang (#44), Ting Xia 
 
 ## Link to Page
-https://github.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender
+https://github.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender (GitHub Repository)
+
+https://www.youtube.com/watch?v=Ul2ts10oPsU (YouTube Video)
+
+https://github.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender/blob/master/Documentation/Submission_Slides_(04-16-17)/Sky_Defender_-_UMKC_SP17_Hack-A-Thon_-_Submission_Slides_-_PDF.pdf (Presentation Slide)
 
 ## Description
 Goal: Help company to manage visiting order of waste stations for truck drivers.
@@ -20,4 +24,3 @@ When the truck driver finishes collecting the waste, he/she can report the compl
 
 ### Scenario #4: 
 Company administrator and truck driver and chat inside the app if needed.
-
