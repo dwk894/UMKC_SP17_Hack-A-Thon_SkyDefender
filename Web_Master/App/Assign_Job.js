@@ -376,6 +376,7 @@ function routine_path_2(region_number, source_index, result_matrix) {  // 'regio
       method: 'GET',
       dataType: 'json',
       success: function(result) {
+        while (result === undefined || result === null) {}
         var elements = result['rows'][0]['elements'];
         for (var j = 0; j < elements.length; j++) {
           result_matrix[source_index][j] = elements[j]['duration']['value'];
