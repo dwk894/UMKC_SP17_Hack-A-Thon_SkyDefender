@@ -1,0 +1,46 @@
+<ion-view view-title="Remaining Waste Station">
+    <ion-nav-view class="padding has-header">
+        <ion-list inset>
+                 <ion-content style="height: 45%; position: relative; top: 2%; overflow: true;">
+           <div ng-repeat="item in items" style="display: flex;">
+                        <div style="width: 53px; text-align: center; font-size: 20px; color: white; position: relative;">
+                            <div style="width: 16px;
+                                        height: 16px;
+                                        margin: 0 auto;
+                                        transform: translateY(180%);
+                                        border-radius: 10px;
+                                        background: rgb(92,215,232);
+                                        border: 2px solid #fff;">
+                            </div>
+                            <div style="position: absolute;
+                                        height: 100%;
+                                        width: 4px;
+                                        top: 0px;
+                                        left: 25px;
+                                        background: rgb(92,215,232);
+                                        z-index: -1;">
+                            </div>
+                        </div>
+
+                        <div style="flex-grow: 2;
+                                    padding: 10px;
+                                    color: #444;
+                                    border: 1px solid #ddd;
+                                    border-top: none;
+                                    border-left: none;
+                                    border-right: none;
+                                    ">
+                            <div style="color: rgba(0, 0, 0, 0.87); font-size: 15px; font-weight: bold;"  >
+                                Waste Station ID: {{item.waste_id}}
+                            </div>
+                            <div style="color: rgba(0, 0, 0, 0.38); font-size: 14px; font-weight: bold;">
+                                Zone ID: {{item.zone_id}}
+                            </div>
+                            <div style="color: #a2dd99; font-weight: bold" id="sugar1">Latitude: {{item.latitude}}</div>
+                            <div style="color: #a2dd99; font-weight: bold" id="sugar2">Longitude: {{item.longtitude}}</div>
+                        </div>
+                    </div>
+       </ion-content>
+        </ion-list>
+    </ion-nav-view>
+</ion-view>
