@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=Ul2ts10oPsU (YouTube Video)
 
 https://github.com/dwk894/UMKC_SP17_Hack-A-Thon_SkyDefender/blob/master/Documentation/Submission_Slides_(04-16-17)/Sky_Defender_-_UMKC_SP17_Hack-A-Thon_-_Submission_Slides_-_PDF.pdf (Presentation Slide)
 
+https://youtu.be/W2i_xKEwqNA (Pitch Presentation Video Demo)
+
 ## Description
 Goal: Help company to manage visiting order of waste stations for truck drivers.
 
